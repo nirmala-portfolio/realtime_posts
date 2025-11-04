@@ -3,6 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'auth_page.dart';
+import 'feed_page.dart';
+
 //import 'feed_page.dart'; // will be used later when feed is ready
 
 void main() async {
@@ -53,7 +55,7 @@ class AuthGate extends StatelessWidget {
         if (user == null) return const AuthPage();
 
         // Logged in → temporarily show placeholder until feed is done
-        return const PlaceholderHome();
+        return FeedPage();
       },
     );
   }
